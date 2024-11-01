@@ -1,0 +1,74 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "productos",
+    "collectionId": "7cab1178-7590-4365-b7fe-6f8f2160ce5b",
+    "dateExported": "2024-11-01T20:16:31.096Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "31835c34-51fd-4127-a8ae-c1c13aaef469",
+            "colId": "7cab1178-7590-4365-b7fe-6f8f2160ce5b",
+            "containerId": "",
+            "name": "save",
+            "url": "127.0.0.1:3000/producto/save",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-31T06:20:43.531Z",
+            "modified": "2024-11-01T19:52:24.135Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nombre_producto\": \"Casa en la playa\",\n    \"ubicacion\": \"Miami, Florida\",\n    \"precio\": 350000.00,\n    \"area\": 120.5,\n    \"tamanio\": 500.75,\n    \"imagen\": \"url-de-imagen.jpg\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d0fa4fe2-98f2-4076-9c8c-8343096e71bc",
+            "colId": "7cab1178-7590-4365-b7fe-6f8f2160ce5b",
+            "containerId": "",
+            "name": "/all",
+            "url": "127.0.0.1:3000/producto/all",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-10-31T06:21:00.236Z",
+            "modified": "2024-11-01T19:54:29.299Z",
+            "headers": []
+        },
+        {
+            "_id": "acfe162a-2dc4-48e6-a166-f12adbb320a3",
+            "colId": "7cab1178-7590-4365-b7fe-6f8f2160ce5b",
+            "containerId": "",
+            "name": "update",
+            "url": "127.0.0.1:3000/producto/update/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-10-31T06:41:08.158Z",
+            "modified": "2024-10-31T06:41:35.236Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nombre_producto\": \"Casa en la playa\",\n    \"ubicacion\": \"Miami, Florida\",\n    \"precio\": 350000.00,\n    \"area\": 120.5,\n    \"tamanio\": 500.75,\n    \"imagen\": \"url-de-imagen.jpg\",\n    \"id_estado\": 2,\n    \"id_compra\": null\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "dc95371c-b4e0-46fc-9432-40d484f76286",
+            "colId": "7cab1178-7590-4365-b7fe-6f8f2160ce5b",
+            "containerId": "",
+            "name": "delete",
+            "url": "127.0.0.1:3000/producto/delete/1",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-10-31T06:46:23.678Z",
+            "modified": "2024-10-31T06:46:34.421Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nombre_producto\": \"Casa en la playa\",\n    \"ubicacion\": \"Miami, Florida\",\n    \"precio\": 350000.00,\n    \"area\": 120.5,\n    \"tamanio\": 500.75,\n    \"imagen\": \"url-de-imagen.jpg\",\n    \"id_estado\": 2,\n    \"id_compra\": null\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "3qNhFf78Da4LXeQwDu8Z-et6kPXfOoxQKhvxhil7usK8-pGRFe-XaWGBODrdjkWYKCm_SfzGBZQj8UtLCw4iBA"
+}
