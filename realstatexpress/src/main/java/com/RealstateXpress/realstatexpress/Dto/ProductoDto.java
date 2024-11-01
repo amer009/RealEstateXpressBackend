@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class ProductoDto{
+
+private Long id_producto;
 private String nombre_producto;
 private String ubicacion;
 private Double precio;

@@ -1,7 +1,9 @@
 package com.RealstateXpress.realstatexpress.service.interfaces;
 
-import com.RealstateXpress.realstatexpress.model.Compra;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.RealstateXpress.realstatexpress.Dto.RequestComprar;
+import com.RealstateXpress.realstatexpress.Dto.ResponseDto;
 
-public interface ICompraService extends JpaRepository<Compra,Long> {
+public interface ICompraService{
+
+    ResponseDto comprar(RequestComprar input);
 }

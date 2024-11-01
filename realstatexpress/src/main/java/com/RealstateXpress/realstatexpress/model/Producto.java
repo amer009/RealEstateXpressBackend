@@ -25,7 +25,7 @@ public class Producto {
     private Double tamanio;
     private String imagen;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "id_estado",referencedColumnName = "id_estado")
     private Estado estado;
 

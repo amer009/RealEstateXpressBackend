@@ -1,6 +1,7 @@
 package com.RealstateXpress.realstatexpress.controller;
 
 import com.RealstateXpress.realstatexpress.Dto.ProductoDto;
+import com.RealstateXpress.realstatexpress.Dto.ResponseDto;
 import com.RealstateXpress.realstatexpress.Dto.UsuarioDto;
 import com.RealstateXpress.realstatexpress.model.Producto;
 import com.RealstateXpress.realstatexpress.model.Usuario;
@@ -21,24 +22,22 @@ public class ProductoController {
     IProductoService services;
 
     @PostMapping(value = "/save", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Producto saveProducto(@RequestBody ProductoDto req){
-        return this.services.save(req);
+    public ResponseEntity<ResponseDto> saveProducto(@RequestBody ProductoDto req){
+        return ResponseEntity.ok(this.services.save(req));
     }
 
     @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Producto>> getAll(){
+    public ResponseEntity<ResponseDto> getAll(){
         return ResponseEntity.ok(this.services.getAll());
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Producto> update(@PathVariable Long id, @RequestBody ProductoDto productoDto) {
-        Producto productoActualizado = this.services.update(id, productoDto);
-        return ResponseEntity.ok(productoActualizado);
+    public ResponseEntity<ResponseDto> update(@PathVariable Long id, @RequestBody ProductoDto productoDto) {
+        return ResponseEntity.ok(this.services.update(id, productoDto));
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> delete(@PathVariable Long id) {
-        this.services.delete(id);
-        return ResponseEntity.ok("Producto eliminado exitosamente");
+    public ResponseEntity<ResponseDto> delete(@PathVariable Long id) {
+        return ResponseEntity.ok(this.services.delete(id));
     }
 }
