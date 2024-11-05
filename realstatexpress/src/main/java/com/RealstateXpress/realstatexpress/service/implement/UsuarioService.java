@@ -1,5 +1,6 @@
 package com.RealstateXpress.realstatexpress.service.implement;
 
+import com.RealstateXpress.realstatexpress.Dto.LoginDto;
 import com.RealstateXpress.realstatexpress.Dto.ResponseDto;
 import com.RealstateXpress.realstatexpress.Dto.UsuarioDto;
 import com.RealstateXpress.realstatexpress.model.Rol;
@@ -79,7 +80,12 @@ public class UsuarioService implements IUsuarioService {
 
        Optional<Usuario> User= userRepository.findByEmailAndClave(input.getEmail(),input.getClave());
         if (User.isPresent()) {
-            return ResponseDto.builder().codigoRespuesta("00").mensaje("Exito").data(true).build();
+            return ResponseDto.builder().codigoRespuesta("00").mensaje("Exito").data(LoginDto.builder()
+                    .nombre(User.get().getNombre())
+                    .email(User.get().getEmail())
+                    .rol(User.get().getRol().getTipoRol())
+                    .build()).build();
+
         } else {
             return ResponseDto.builder().codigoRespuesta("05").mensaje("Usuario o clave invalida").data(false).build();
         }
