@@ -48,7 +48,7 @@ public class DataInitializer {
                 estadoRepository.save(Estado.builder().tipoEstado("En venta").build());
             }
 
-            if (userReposiory.findByEmail("admin@correo.com").isEmpty()) {
+            if (userReposiory.findByEmail("realestatexpress2024@gmail.com").isEmpty()) {
 
                 Rol r =rolRepository.findByTipoRol("Administrador");
                 userReposiory.save(Usuario.builder()
